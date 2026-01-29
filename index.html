@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Enlarge Studio | Photo Enlargements & Portraits</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f5f7;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1c3d5a, #3a6073);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+.hero .btn {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: #f0b429;
+  color: #1c3d5a;
+  border: none;
+  font-weight: bold;
+}
+.hero .btn:hover {
+  background: #d99a1c;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1c3d5a;
+}
+
+/* CARDS */
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+/* Overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(28,61,90,0.85);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* PRICES */
+.price-card {
+  background: #fff8e1;
+  text-align: center;
+  padding: 25px 0;
+  border-radius: 15px;
+  font-weight: 700;
+  color: #b38f00;
+  font-size: 1.4rem;
+  transition: transform 0.3s;
+}
+.price-card:hover {
+  transform: scale(1.03);
+}
+
+/* NOTES */
+.notes {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.notes li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* ORDER SECTION */
+#order {
+  background: #1c3d5a;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+#order .btn {
+  font-size: 1.2rem;
+  padding: 14px 35px;
+  border-radius: 50px;
+  background: #f0b429;
+  color: #1c3d5a;
+  border: none;
+  font-weight: bold;
+}
+#order .btn:hover {
+  background: #d99a1c;
+}
+
+footer {
+  background: #142533;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background:#142533;">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">📸 Enlarge Studio</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Professional Photo Enlargements & Portraits</h1>
+  <p>Turn your memories into premium quality prints | A4, A3, A2 Sizes</p>
+  <a href="#order" class="btn">Order Now</a>
+</section>
+
+<!-- GALLERY -->
+<section class="container my-5">
+  <h2 class="section-title">Our Work</h2>
+
+  <!-- ENLARGEMENTS -->
+  <h4 class="fw-bold mb-3">Enlargements</h4>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card" onclick="orderWhatsApp('Enlargement','image1','A4')">
+        <img src="image1.jpg" class="card-img-top">
+        <div class="overlay">Enlargement - A4</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" onclick="orderWhatsApp('Enlargement','image2','A3')">
+        <img src="image2.jpg" class="card-img-top">
+        <div class="overlay">Enlargement - A3</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" onclick="orderWhatsApp('Enlargement','image3','A2')">
+        <img src="image3.jpg" class="card-img-top">
+        <div class="overlay">Enlargement - A2</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" onclick="orderWhatsApp('Enlargement','image4','A3')">
+        <img src="image4.jpg" class="card-img-top">
+        <div class="overlay">Enlargement - A3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTRAITS -->
+  <h4 class="fw-bold mt-5 mb-3">Portraits</h4>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card" onclick="orderWhatsApp('Portrait','image5','A4')">
+        <img src="image5.jpg" class="card-img-top">
+        <div class="overlay">Portrait - A4</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card" onclick="orderWhatsApp('Portrait','image6','A3')">
+        <img src="image6.jpg" class="card-img-top">
+        <div class="overlay">Portrait - A3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM -->
+  <h4 class="fw-bold mt-5 mb-3 text-center">Custom Work</h4>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card" onclick="orderWhatsApp('Custom','image7','Specify size')">
+        <img src="image7.jpg" class="card-img-top">
+        <div class="overlay">Custom Order</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section class="container my-5">
+  <h2 class="section-title">Sizes & Prices</h2>
+
+  <h5 class="fw-bold mb-3">Enlargements</h5>
+  <div class="row g-4 text-center">
+    <div class="col-md-4"><div class="price-card">A4 <br> 5,000 FCFA</div></div>
+    <div class="col-md-4"><div class="price-card">A3 <br> 10,000 FCFA</div></div>
+    <div class="col-md-4"><div class="price-card">A2 <br> 20,000 FCFA</div></div>
+  </div>
+
+  <h5 class="fw-bold mt-5 mb-3">Portraits</h5>
+  <div class="row g-4 text-center">
+    <div class="col-md-4"><div class="price-card">A4 <br> 15,000 FCFA</div></div>
+    <div class="col-md-4"><div class="price-card">A3 <br> 20,000 FCFA</div></div>
+    <div class="col-md-4"><div class="price-card">A2 <br> 25,000 FCFA</div></div>
+  </div>
+</section>
+
+<!-- NOTES -->
+<section class="container my-5">
+  <h2 class="section-title">Customer Notes</h2>
+  <div class="notes">
+    <ul>
+      <li>✔ High-quality prints with professional finishing</li>
+      <li>✔ Images are carefully edited to enhance details</li>
+      <li>✔ Portraits receive extra retouching for premium look</li>
+      <li>✔ Custom orders welcome — just send your request</li>
+      <li>✔ Fast response via WhatsApp</li>
+      <li>✔ Delivery time depends on size and quantity</li>
+      <li>✔ Satisfaction guaranteed — we ensure your photo looks amazing</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section id="order">
+  <h2 class="fw-bold mb-3">Place Your Order</h2>
+  <p class="mb-4">Click any image above or the button below to send your order via WhatsApp</p>
+  <a href="https://wa.me/237621498810?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank" class="btn">📲 Order on WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Enlarge Studio
+</footer>
+
+<script>
+function orderWhatsApp(type, image, size) {
+  let msg = `Hello! I want to order a ${type} (${image}) in size: ${size}.`;
+  let url = `https://wa.me/237621498810?text=` + encodeURIComponent(msg);
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
